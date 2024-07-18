@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   swap_moves.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: breda-si <breda-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 16:05:47 by marvin            #+#    #+#             */
-/*   Updated: 2024/07/15 16:05:47 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/18 21:59:24 by breda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	swap(t_stack **stack)
 {
 	if (!*stack || !(*stack)->next)
 		return ;
-	(*stack) = (*stack)->next;
+	*stack = (*stack)->next;
 	(*stack)->prev->prev = *stack;
 	(*stack)->prev->next = (*stack)->next;
 	if ((*stack)->next)

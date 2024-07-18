@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   start_b.c                                          :+:      :+:    :+:   */
+/*   stack_starts.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: breda-si <breda-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 09:33:24 by marvin            #+#    #+#             */
-/*   Updated: 2024/07/16 09:33:24 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/18 23:17:27 by breda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ void	start_b(t_stack **stack_a, t_stack **stack_b)
 		pb(stack_a, stack_b, 1);
 	}
 	set_datas(stack_a, stack_b);
-	max_on_top(stack_a);
+	max_on_top(stack_b);
 }

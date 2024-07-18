@@ -11,9 +11,9 @@ NAME	=	push_swap
 
 CFLAGS  = 	-Wall -Wextra -Werror -g
 
-LIBFTA  = 	./Libft/libft.a
+LIBFTA  = 	./libft/libft.a
 
-LIBFTD  = 	./Libft
+LIBFTD  = 	./libft
 
 all: $(NAME)
 

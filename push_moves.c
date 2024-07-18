@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_moves.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: breda-si <breda-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 09:38:14 by marvin            #+#    #+#             */
-/*   Updated: 2024/07/16 09:38:14 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/18 21:50:17 by breda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,18 @@ void	push(t_stack **src, t_stack **dst)
 	*src = (*src)->next;
 	if (*src)
 		(*src)->prev = NULL;
-	tmp->next = NULL;
-	if (*dst)
-		{
-			tmp->next = *dst;
-			tmp->next->prev = tmp;
-			*dst = tmp;
-			return ;
-		}
-	*dst = tmp;
 	tmp->prev = NULL;
+	if (!*dst)
+	{
+		*dst = tmp;
+		tmp->next = NULL;
+	}
+	else
+	{
+		tmp->next = *dst;
+		tmp->next->prev = tmp;
+		*dst = tmp;
+	}
 }
 
 void	pa(t_stack **a, t_stack **b, int trigger)
